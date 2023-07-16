@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: Create posts table
+      id: Create products table
       author: Xayyam Qarazada
       changes:
         - createTable:
-            tableName: users
+            tableName: products
             columns:
               - column:
                   name: id
@@ -14,29 +14,18 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: username
+                  name: name
                   type: varchar(256)
                   constraints:
                     nullable: false
               - column:
-                  name: age
-                  type: int
+                  name: price
+                  type: double
                   constraints:
                     nullable: false
               - column:
-                  name: birth_place
-                  type: text
-              - column:
-                  name: created_at
-                  type: timestamp
-                  defaultValue: now()
-                  constraints:
-                    nullable: false
-              - column:
-                  name: update_at
-                  type: timestamp
-                  defaultValue: now()
-                  constraints:
-                    nullable: false
+                  name: description
+                  type: varchar(256)
 
-            remarks: Table to store information about users
+
+            remarks: Table to store information about products
